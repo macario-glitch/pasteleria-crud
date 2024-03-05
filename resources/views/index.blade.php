@@ -7,7 +7,7 @@
             <h2 class="text-white">CRUD Pasteleria</h2>
         </div>
         <div>
-            <a href="" class="btn btn-primary">Añadir Orden</a>
+            <a href="{{route('tasks.create')}}"" class="btn btn-primary">Añadir Orden</a>
         </div>
     </div>
 

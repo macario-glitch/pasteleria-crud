@@ -66,7 +66,7 @@ class TaskController extends Controller
             'description' => 'required']
         );
 
-        $task->update($request -> all());
+        $task->update($request->all());
         return redirect()->route('tasks.index') -> with('success', 'Orden actualizada');
     }
 
