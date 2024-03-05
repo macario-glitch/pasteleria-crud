@@ -35,7 +35,17 @@
                     {{$task->due_date}}
                     </td>
                     <td>
-                        <span class="badge bg-warning fs-6">{{$task->status}}</span>
+                        @if($task->status == "Pendiente")
+                            <span class="badge bg-danger fs-6">{{$task->status}}</span>
+                        @endif
+
+                        @if($task->status == "En progreso")
+                            <span class="badge bg-warning fs-6">{{$task->status}}</span>
+                        @endif
+
+                        @if($task->status == "Completada")
+                            <span class="badge bg-success fs-6">{{$task->status}}</span>
+                        @endif
                     </td>
                     <td>
                         <a href="{{route('tasks.edit', $task->id)}}" class="btn btn-warning">Editar</a>
